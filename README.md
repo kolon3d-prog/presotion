@@ -16,11 +16,26 @@ Presotion lets you create presentations using React components with fragment-bas
 
 ## Quick Start
 
+### Option 1: Clone and run example
+
 ```bash
-npx create-presotion my-talk
-cd my-talk
-npm install
-npm run dev
+git clone https://github.com/kolon3d-prog/presotion.git
+cd presotion
+pnpm install
+pnpm --filter presotion-basic-example dev
+```
+
+### Option 2: Use in your own project
+
+Clone the repo and link packages locally:
+
+```bash
+git clone https://github.com/kolon3d-prog/presotion.git
+cd presotion
+pnpm install && pnpm build
+
+# In your project, reference packages with file: paths
+# "@presotion/core": "file:../presotion/packages/core"
 ```
 
 ## Core Concepts
