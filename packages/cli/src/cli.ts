@@ -53,6 +53,7 @@ program
     mkdirSync(join(projectPath, 'public'));
 
     // Create package.json
+    // Using gitpkg.vercel.app to install from monorepo subdirectories
     const packageJson = {
       name: projectName,
       version: '0.1.0',
@@ -63,11 +64,11 @@ program
         preview: 'vite preview',
       },
       dependencies: {
-        '@presotion/core': '^0.1.0',
-        '@presotion/player': '^0.1.0',
-        '@presotion/layouts': '^0.1.0',
-        '@presotion/code': '^0.1.0',
-        '@presotion/transitions': '^0.1.0',
+        '@presotion/core': 'https://gitpkg.vercel.app/kolon3d-prog/presotion/packages/core?main',
+        '@presotion/player': 'https://gitpkg.vercel.app/kolon3d-prog/presotion/packages/player?main',
+        '@presotion/layouts': 'https://gitpkg.vercel.app/kolon3d-prog/presotion/packages/layouts?main',
+        '@presotion/code': 'https://gitpkg.vercel.app/kolon3d-prog/presotion/packages/code?main',
+        '@presotion/transitions': 'https://gitpkg.vercel.app/kolon3d-prog/presotion/packages/transitions?main',
         react: '^18.2.0',
         'react-dom': '^18.2.0',
       },

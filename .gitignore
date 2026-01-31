@@ -2,9 +2,9 @@
 node_modules/
 .pnpm-store/
 
-# Build outputs
-dist/
-build/
+# Build outputs - NOT ignored so GitHub installs work
+# dist/
+# build/
 *.tsbuildinfo
 
 # IDE
