@@ -1,0 +1,62 @@
+{
+  "name": "@presotion/transitions",
+  "version": "0.1.0",
+  "description": "Slide transition effects for Presotion",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./fade": {
+      "import": "./dist/fade.mjs",
+      "require": "./dist/fade.js",
+      "types": "./dist/fade.d.ts"
+    },
+    "./slide": {
+      "import": "./dist/slide.mjs",
+      "require": "./dist/slide.js",
+      "types": "./dist/slide.d.ts"
+    },
+    "./wipe": {
+      "import": "./dist/wipe.mjs",
+      "require": "./dist/wipe.js",
+      "types": "./dist/wipe.d.ts"
+    },
+    "./flip": {
+      "import": "./dist/flip.mjs",
+      "require": "./dist/flip.js",
+      "types": "./dist/flip.d.ts"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup src/index.ts src/fade.ts src/slide.ts src/wipe.ts src/flip.ts --format cjs,esm --dts --clean",
+    "dev": "tsup src/index.ts src/fade.ts src/slide.ts src/wipe.ts src/flip.ts --format cjs,esm --dts --watch",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@presotion/core": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3"
+  },
+  "keywords": [
+    "presotion",
+    "transitions",
+    "animations",
+    "slides"
+  ],
+  "license": "MIT"
+}

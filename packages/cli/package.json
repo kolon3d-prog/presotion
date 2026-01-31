@@ -1,0 +1,35 @@
+{
+  "name": "@presotion/cli",
+  "version": "0.1.0",
+  "description": "CLI for creating and managing Presotion presentations",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "presotion": "./dist/cli.js"
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup src/cli.ts --format cjs --dts --clean",
+    "dev": "tsup src/cli.ts --format cjs --dts --watch",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "commander": "^12.0.0",
+    "prompts": "^2.4.2",
+    "picocolors": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/prompts": "^2.4.9",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3",
+    "@types/node": "^20.11.0"
+  },
+  "keywords": [
+    "presotion",
+    "cli",
+    "presentation",
+    "slides"
+  ],
+  "license": "MIT"
+}
