@@ -80,12 +80,11 @@ const DeckBase: React.FC<DeckProps> = ({ children, startFrom = 0 }) => {
     let slideIndex = startFrom;
 
     Children.forEach(children, (child) => {
-      if (isValidElement(child) && child.type === DeckSlide) {
-        const props = child.props as DeckSlideProps;
+      if (isValidElement<DeckSlideProps>(child) && child.type === DeckSlide) {
         result.push({
           element: child,
           slideIndex,
-          fragmentCount: props.fragmentCount ?? 1,
+          fragmentCount: child.props.fragmentCount ?? 1,
         });
         slideIndex++;
       }

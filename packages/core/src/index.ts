@@ -47,6 +47,9 @@ export { Easing } from './easing';
 // Asset utilities
 export { staticFile } from './staticFile';
 
+// Context (for advanced usage like Player)
+export { PresentationContext, usePresentationContext } from './internals/context';
+
 // Context types (for advanced usage)
 export type {
   PresentationConfig,
