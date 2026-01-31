@@ -168,7 +168,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     writeFileSync(join(projectPath, 'src/main.tsx'), mainTsx);
 
     // Create Presentation.tsx
-    const presentationTsx = `import { Deck, FragmentList, AbsoluteFill } from '@presotion/core';
+    const presentationTsx = `import { Deck, FragmentList } from '@presotion/core';
 import { CoverLayout, DefaultLayout, CenterLayout } from '@presotion/layouts';
 
 export const Presentation = () => {
